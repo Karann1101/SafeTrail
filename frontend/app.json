@@ -1,7 +1,12 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "frontend",
     "slug": "frontend",
+=======
+    "name": "SafeTrail",
+    "slug": "safetrail",
+>>>>>>> 614608e10ca6c3da0f9d1c4b6fea6749e3c42918
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -38,7 +43,12 @@
             "backgroundColor": "#000000"
           }
         }
+<<<<<<< HEAD
       ]
+=======
+      ],
+      "expo-font"
+>>>>>>> 614608e10ca6c3da0f9d1c4b6fea6749e3c42918
     ],
     "experiments": {
       "typedRoutes": true,
