@@ -1,24 +1,8 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "nodejs": "^0.0.0"
-  },
-  "devDependencies": {
-    "@nomicfoundation/hardhat-ethers": "^4.0.1",
-    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
-    "@types/chai": "^5.2.2",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^24.5.2",
-    "chai": "^6.0.1",
-    "ethers": "^6.15.0",
-    "hardhat": "^3.0.6",
-    "mocha": "^11.7.2"
-  },
-  "type": "module"
-=======
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,6 +16,16 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.1",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.5.2",
+    "chai": "^6.0.1",
+    "ethers": "^6.15.0",
+    "hardhat": "^3.0.6",
+    "mocha": "^11.7.2"
   }
->>>>>>> 614608e10ca6c3da0f9d1c4b6fea6749e3c42918
 }
