@@ -1,7 +1,7 @@
 // app/register.tsx
 import React, { useMemo, useState } from "react";
 import { useFonts } from 'expo-font';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground, ScrollView, KeyboardAvoidingView, Platform, Alert, ActivityIndicator } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground, ScrollView, KeyboardAvoidingView, Platform, Alert, ActivityIndicator, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from "expo-router";
 import { supabase } from "../utils/supabaseClient";
@@ -92,14 +92,15 @@ export default function RegisterScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <ImageBackground
         source={require("../assets/images/register.png")}
         style={styles.background}
         resizeMode="cover"
       >
         <Text style={styles.logo}>SafeTrails</Text>
-        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1, width: '100%' }}>
-          <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
+        <KeyboardAvoidingView behavior='padding' keyboardVerticalOffset={Platform.OS === 'ios' ? 64 : 100} style={{ flex: 1, width: '100%' }}>
+          <ScrollView contentContainerStyle={styles.scrollContent} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag" contentInsetAdjustmentBehavior="always" automaticallyAdjustKeyboardInsets={true} showsVerticalScrollIndicator={false}>
             <View style={styles.container}>
               <Text style={styles.title}>Create Your Account</Text>
 
@@ -135,7 +136,7 @@ export default function RegisterScreen() {
         />
         <TextInput
           style={styles.input}
-          placeholder="Age (optional)"
+          placeholder="Age"
           keyboardType="number-pad"
           placeholderTextColor="#666"
           value={age}
@@ -143,13 +144,13 @@ export default function RegisterScreen() {
         />
         <TextInput
           style={styles.input}
-          placeholder="Gender (optional)"
+          placeholder="Gender"
           placeholderTextColor="#666"
           value={gender}
           onChangeText={setGender}
         />
 
-            <Text style={styles.sectionTitle}>Identity (Light KYC)</Text>
+            <Text style={styles.sectionTitle}>Identity</Text>
         <TextInput
           style={styles.input}
           placeholder="ID Type (Passport / Driving License / Govt. ID)"
@@ -220,6 +221,7 @@ export default function RegisterScreen() {
           </ScrollView>
         </KeyboardAvoidingView>
       </ImageBackground>
+      </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 }
