@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221644414379",
+    "project_id": "safetrails-73775",
+    "storage_bucket": "safetrails-73775.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221644414379:android:ad963abcc61569bd2ec6ee",
+        "android_client_info": {
+          "package_name": "com.safetrail.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN0GPCRAOR6lJlsQRi0YLNOYlKHZ-xRio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
