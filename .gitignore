@@ -1,5 +1,6 @@
 node_modules
-<<<<<<< HEAD
-node_modules
-=======
->>>>>>> 614608e10ca6c3da0f9d1c4b6fea6749e3c42918
+.env
+dist
+coverage
+artifacts
+cache
